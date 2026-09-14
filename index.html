@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Rose</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        svg {
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+        }
+
+        h1 {
+            color: white;
+            margin-top: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        .rose-animation {
+            animation: bloom 3s ease-in-out infinite;
+        }
+
+        @keyframes bloom {
+            0% {
+                opacity: 0.8;
+                transform: scale(0.95);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0.8;
+                transform: scale(0.95);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg class="rose-animation" viewBox="0 0 200 300" width="250" height="350" xmlns="http://www.w3.org/2000/svg">
+            <!-- Stem -->
+            <path d="M 100 300 Q 95 250 100 200 Q 105 150 100 100" stroke="#2d5016" stroke-width="3" fill="none" stroke-linecap="round"/>
+            
+            <!-- Leaves -->
+            <ellipse cx="75" cy="200" rx="20" ry="35" fill="#27ae60" transform="rotate(-45 75 200)"/>
+            <ellipse cx="125" cy="180" rx="20" ry="35" fill="#2ecc71" transform="rotate(45 125 180)"/>
+            <ellipse cx="70" cy="130" rx="18" ry="30" fill="#27ae60" transform="rotate(-50 70 130)"/>
+            <ellipse cx="130" cy="120" rx="18" ry="30" fill="#2ecc71" transform="rotate(50 130 120)"/>
+            
+            <!-- Rose Petals - Outermost layer (light pink) -->
+            <circle cx="60" cy="40" r="28" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="140" cy="40" r="28" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="50" cy="80" r="28" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="150" cy="80" r="28" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="100" cy="10" r="28" fill="#ff69b4" opacity="0.7"/>
+            
+            <!-- Rose Petals - Middle layer (medium pink) -->
+            <circle cx="75" cy="45" r="24" fill="#ff1493" opacity="0.8"/>
+            <circle cx="125" cy="45" r="24" fill="#ff1493" opacity="0.8"/>
+            <circle cx="65" cy="75" r="24" fill="#ff1493" opacity="0.8"/>
+            <circle cx="135" cy="75" r="24" fill="#ff1493" opacity="0.8"/>
+            <circle cx="100" cy="30" r="24" fill="#ff1493" opacity="0.8"/>
+            
+            <!-- Rose Petals - Inner layer (deep pink/red) -->
+            <circle cx="90" cy="55" r="18" fill="#c71585" opacity="0.9"/>
+            <circle cx="110" cy="55" r="18" fill="#c71585" opacity="0.9"/>
+            <circle cx="85" cy="70" r="18" fill="#c71585" opacity="0.9"/>
+            <circle cx="115" cy="70" r="18" fill="#c71585" opacity="0.9"/>
+            <circle cx="100" cy="45" r="18" fill="#c71585" opacity="0.9"/>
+            
+            <!-- Rose Center (dark red) -->
+            <circle cx="100" cy="60" r="12" fill="#8b0000"/>
+            <circle cx="100" cy="60" r="8" fill="#660000"/>
+            
+            <!-- Shine effect -->
+            <circle cx="95" cy="55" r="4" fill="#ffffff" opacity="0.6"/>
+        </svg>
+        
+        <h1>🌹 A Beautiful Rose</h1>
+        <p>Crafted with HTML5 and SVG</p>
+    </div>
+</body>
+</html>
